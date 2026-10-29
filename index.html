@@ -176,12 +176,7 @@
   const FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSf4U0GjOjChmrhBIaglOV8OV4cK48fGgODpT410kESZLqyrhQ/viewform";
   const joinButton = document.getElementById("joinButton");
   joinButton.addEventListener("click", function(event) {
-    if (!FORM_LINK.startsWith("https://")) {
-      event.preventDefault();
-      alert("JOIN NOW");
-    } else {
-      joinButton.href = FORM_LINK;
-    }
+    joinButton.href = FORM_LINK;
   });
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
