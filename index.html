@@ -6,113 +6,545 @@
   <meta name="theme-color" content="#07111f" />
   <meta name="description" content="FUTURE — Delta University student team. Learn, connect, and create opportunities." />
   <title>FUTURE | Delta University</title>
+
   <style>
-    :root{--bg:#050b14;--panel:#0a1728;--panel2:#0d2036;--blue:#39a9ff;--blue2:#83ccff;--white:#f6f9ff;--muted:#b8c8da;--line:rgba(75,177,255,.28)}
+    :root{
+      --bg:#050b14;
+      --panel:#0a1728;
+      --panel2:#0d2036;
+      --blue:#39a9ff;
+      --blue2:#83ccff;
+      --white:#f6f9ff;
+      --muted:#b8c8da;
+      --line:rgba(75,177,255,.28)
+    }
+
     *{box-sizing:border-box}
+
     html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(circle at 85% 0%,#102d4b 0,transparent 34%),var(--bg);color:var(--white);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+
+    body{
+      margin:0;
+      background:radial-gradient(circle at 85% 0%,#102d4b 0,transparent 34%),var(--bg);
+      color:var(--white);
+      font-family:Tahoma,Arial,sans-serif;
+      line-height:1.8
+    }
+
     a{color:inherit;text-decoration:none}
+
     .container{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(5,11,20,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:2px}
-    .brand img{width:54px;height:54px;object-fit:cover;border-radius:50%;border:1px solid var(--line)}
-    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;font-weight:400}
-    nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(5,11,20,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line)
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:12px 0
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:2px
+    }
+
+    .brand img{
+      width:54px;
+      height:54px;
+      object-fit:cover;
+      border-radius:50%;
+      border:1px solid var(--line)
+    }
+
+    .brand small{
+      display:block;
+      color:var(--muted);
+      font-size:10px;
+      letter-spacing:1px;
+      font-weight:400
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+      font-size:14px;
+      color:var(--muted)
+    }
+
     nav a:hover{color:var(--blue2)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 19px;border-radius:12px;background:linear-gradient(135deg,var(--blue),#1874c4);color:#00101d;font-weight:800;border:0;cursor:pointer;box-shadow:0 8px 26px rgba(57,169,255,.18)}
-    .btn.secondary{background:transparent;color:var(--white);border:1px solid var(--line);box-shadow:none}
-    .hero{padding:78px 0 64px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:46px}
-    .eyebrow{color:var(--blue2);font-weight:700;letter-spacing:2px;font-size:13px}
-    h1{font-size:clamp(42px,6vw,76px);line-height:1.12;margin:14px 0}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 19px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--blue),#1874c4);
+      color:#00101d;
+      font-weight:800;
+      border:0;
+      cursor:pointer;
+      box-shadow:0 8px 26px rgba(57,169,255,.18)
+    }
+
+    .btn.secondary{
+      background:transparent;
+      color:var(--white);
+      border:1px solid var(--line);
+      box-shadow:none
+    }
+
+    .hero{
+      padding:78px 0 64px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      align-items:center;
+      gap:46px
+    }
+
+    .eyebrow{
+      color:var(--blue2);
+      font-weight:700;
+      letter-spacing:2px;
+      font-size:13px
+    }
+
+    h1{
+      font-size:clamp(42px,6vw,76px);
+      line-height:1.12;
+      margin:14px 0
+    }
+
     h1 span{color:var(--blue)}
-    .hero p{max-width:620px;color:var(--muted);font-size:18px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .hero-art{position:relative;display:grid;place-items:center;min-height:350px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(18,51,82,.78),rgba(5,11,20,.8));overflow:hidden}
-    .hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(57,169,255,.2);border-radius:50%;width:330px;height:330px}
-    .hero-art:after{width:240px;height:240px}
-    .hero-art img{position:relative;z-index:1;width:min(76%,300px);border-radius:22px;mix-blend-mode:screen}
-    .floating{position:absolute;z-index:2;background:#081626;border:1px solid var(--line);padding:8px 13px;border-radius:12px;color:var(--blue2);font-size:13px}
-    .f1{top:18%;right:7%}.f2{bottom:17%;left:6%}.f3{bottom:8%;right:19%}
+
+    .hero p{
+      max-width:620px;
+      color:var(--muted);
+      font-size:18px
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:28px
+    }
+
+    .hero-art{
+      position:relative;
+      display:grid;
+      place-items:center;
+      min-height:350px;
+      border:1px solid var(--line);
+      border-radius:30px;
+      background:linear-gradient(145deg,rgba(18,51,82,.78),rgba(5,11,20,.8));
+      overflow:hidden
+    }
+
+    .hero-art:before,.hero-art:after{
+      content:"";
+      position:absolute;
+      border:1px solid rgba(57,169,255,.2);
+      border-radius:50%;
+      width:330px;
+      height:330px
+    }
+
+    .hero-art:after{
+      width:240px;
+      height:240px
+    }
+
+    .hero-art img{
+      position:relative;
+      z-index:1;
+      width:min(76%,300px);
+      border-radius:22px;
+      mix-blend-mode:screen
+    }
+
+    .floating{
+      position:absolute;
+      z-index:2;
+      background:#081626;
+      border:1px solid var(--line);
+      padding:8px 13px;
+      border-radius:12px;
+      color:var(--blue2);
+      font-size:13px
+    }
+
+    .f1{top:18%;right:7%}
+    .f2{bottom:17%;left:6%}
+    .f3{bottom:8%;right:19%}
+
     section{padding:56px 0}
-    .section-head{text-align:center;max-width:720px;margin:0 auto 30px}
-    .section-head h2{font-size:clamp(27px,4vw,40px);margin:0 0 8px}
-    .section-head p{color:var(--muted);margin:0}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{padding:23px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(13,32,54,.9),rgba(7,17,31,.9));border-radius:19px;transition:.2s}
-    .card:hover{transform:translateY(-4px);border-color:rgba(57,169,255,.65)}
-    .icon{width:48px;height:48px;display:grid;place-items:center;background:rgba(57,169,255,.12);border:1px solid var(--line);border-radius:14px;font-size:23px}
-    .card h3{margin:13px 0 4px;font-size:20px}
-    .en{display:block;color:var(--blue2);font-size:12px;letter-spacing:1px;direction:ltr;text-align:right}
-    .card p{margin:8px 0 0;color:var(--muted);font-size:14px}
-    .about-box{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center;padding:30px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(120deg,rgba(15,43,70,.8),rgba(6,15,27,.8))}
-    .about-box h2{font-size:32px;margin:0 0 10px}
+
+    .section-head{
+      text-align:center;
+      max-width:720px;
+      margin:0 auto 30px
+    }
+
+    .section-head h2{
+      font-size:clamp(27px,4vw,40px);
+      margin:0 0 8px
+    }
+
+    .section-head p{
+      color:var(--muted);
+      margin:0
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px
+    }
+
+    .card{
+      padding:23px;
+      border:1px solid var(--line);
+      background:linear-gradient(145deg,rgba(13,32,54,.9),rgba(7,17,31,.9));
+      border-radius:19px;
+      transition:.2s
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(57,169,255,.65)
+    }
+
+    .icon{
+      width:48px;
+      height:48px;
+      display:grid;
+      place-items:center;
+      background:rgba(57,169,255,.12);
+      border:1px solid var(--line);
+      border-radius:14px;
+      font-size:23px
+    }
+
+    .card h3{
+      margin:13px 0 4px;
+      font-size:20px
+    }
+
+    .en{
+      display:block;
+      color:var(--blue2);
+      font-size:12px;
+      letter-spacing:1px;
+      direction:ltr;
+      text-align:right
+    }
+
+    .card p{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-size:14px
+    }
+
+    .about-box{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+      align-items:center;
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:linear-gradient(120deg,rgba(15,43,70,.8),rgba(6,15,27,.8))
+    }
+
+    .about-box h2{
+      font-size:32px;
+      margin:0 0 10px
+    }
+
     .about-box p{color:var(--muted)}
-    .pill-list{display:flex;gap:10px;flex-wrap:wrap}
-    .pill{border:1px solid var(--line);padding:8px 13px;border-radius:99px;color:var(--blue2);font-size:13px}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .step{border-right:3px solid var(--blue);padding:8px 18px}
+
+    .pill-list{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap
+    }
+
+    .pill{
+      border:1px solid var(--line);
+      padding:8px 13px;
+      border-radius:99px;
+      color:var(--blue2);
+      font-size:13px
+    }
+
+    /* Leadership Section */
+
+    .leadership-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px
+    }
+
+    .leader-card{
+      padding:28px;
+      border:1px solid var(--line);
+      background:linear-gradient(145deg,rgba(13,32,54,.95),rgba(7,17,31,.95));
+      border-radius:20px;
+      transition:.2s
+    }
+
+    .leader-card:hover{
+      transform:translateY(-5px);
+      border-color:var(--blue)
+    }
+
+    .leader-icon{
+      width:65px;
+      height:65px;
+      display:grid;
+      place-items:center;
+      background:rgba(57,169,255,.13);
+      border:1px solid var(--line);
+      border-radius:18px;
+      font-size:32px;
+      margin-bottom:14px
+    }
+
+    .leader-card h3{
+      font-size:24px;
+      margin:8px 0 3px
+    }
+
+    .leader-card .role-en{
+      color:var(--blue2);
+      font-size:13px;
+      direction:ltr;
+      text-align:right;
+      display:block
+    }
+
+    .leader-card p{
+      color:var(--muted);
+      font-size:14px;
+      margin:14px 0 0
+    }
+
+    .leader-card ul{
+      color:var(--muted);
+      padding-right:20px;
+      margin:14px 0 0;
+      font-size:14px
+    }
+
+    .leader-card li{margin-bottom:7px}
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px
+    }
+
+    .step{
+      border-right:3px solid var(--blue);
+      padding:8px 18px
+    }
+
     .step b{font-size:19px}
-    .step p{color:var(--muted);font-size:14px}
-    .join{padding:38px;border:1px solid var(--line);border-radius:24px;text-align:center;background:radial-gradient(circle at top,#123c60,transparent 70%),var(--panel)}
-    .join h2{font-size:34px;margin:0 0 8px}
-    .join p{color:var(--muted);margin:0 auto 22px;max-width:650px}
-    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:13px}
-    .foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
-    .socials{display:flex;gap:15px}
-    .note{font-size:12px;color:#8ea7bf;margin-top:12px}
-    .lang-switch{display:flex;gap:6px;align-items:center}
-    .lang-switch button{background:transparent;color:var(--muted);border:1px solid var(--line);padding:7px 10px;border-radius:10px;cursor:pointer;font:inherit;font-size:12px}
-    .lang-switch button.active{background:var(--blue);color:#00101d;border-color:var(--blue);font-weight:800}
-    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.hero-art{min-height:280px}.grid{grid-template-columns:repeat(2,1fr)}.about-box{grid-template-columns:1fr}.steps{grid-template-columns:1fr}nav{gap:10px}.nav{align-items:flex-start}.nav .btn{display:none}}
-    @media(max-width:520px){.grid{grid-template-columns:1fr}.brand img{width:43px;height:43px}nav{font-size:12px}.hero p{font-size:16px}.join{padding:26px 18px}}
+
+    .step p{
+      color:var(--muted);
+      font-size:14px
+    }
+
+    .join{
+      padding:38px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      text-align:center;
+      background:radial-gradient(circle at top,#123c60,transparent 70%),var(--panel)
+    }
+
+    .join h2{
+      font-size:34px;
+      margin:0 0 8px
+    }
+
+    .join p{
+      color:var(--muted);
+      margin:0 auto 22px;
+      max-width:650px
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0;
+      color:var(--muted);
+      font-size:13px
+    }
+
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap
+    }
+
+    .socials{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap
+    }
+
+    .socials a:hover{color:var(--blue2)}
+
+    .lang-switch{
+      display:flex;
+      gap:6px;
+      align-items:center
+    }
+
+    .lang-switch button{
+      background:transparent;
+      color:var(--muted);
+      border:1px solid var(--line);
+      padding:7px 10px;
+      border-radius:10px;
+      cursor:pointer;
+      font:inherit;
+      font-size:12px
+    }
+
+    .lang-switch button.active{
+      background:var(--blue);
+      color:#00101d;
+      border-color:var(--blue);
+      font-weight:800
+    }
+
+    @media(max-width:800px){
+      .hero{
+        grid-template-columns:1fr;
+        padding-top:48px
+      }
+
+      .hero-art{min-height:280px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .about-box{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      nav{gap:10px}
+      .nav{align-items:flex-start}
+      .nav .btn{display:none}
+    }
+
+    @media(max-width:520px){
+      .grid{grid-template-columns:1fr}
+      .leadership-grid{grid-template-columns:1fr}
+      .brand img{
+        width:43px;
+        height:43px
+      }
+      nav{font-size:12px}
+      .hero p{font-size:16px}
+      .join{padding:26px 18px}
+    }
   </style>
 </head>
+
 <body>
+
 <header>
   <div class="container nav">
+
     <a class="brand" href="#home" aria-label="FUTURE home">
       <img src="future-logo.jpg" alt="FUTURE Delta University logo">
       <span>FUTURE<small>DELTA UNIVERSITY</small></span>
     </a>
+
     <nav>
       <a href="#about" data-i18n="navAbout">عن التيم</a>
+      <a href="#leadership" data-i18n="navLeadership">القيادات</a>
       <a href="#departments" data-i18n="navDepartments">الأقسام</a>
       <a href="#events" data-i18n="navEvents">الفعاليات</a>
       <a href="#join" data-i18n="navJoin">انضم لينا</a>
     </nav>
-    <div class="lang-switch" aria-label="Choose language"><button type="button" id="langAr" class="active">🇪🇬 العربية</button><button type="button" id="langEn">🇬🇧 English</button></div>
+
+    <div class="lang-switch" aria-label="Choose language">
+      <button type="button" id="langAr" class="active">🇪🇬 العربية</button>
+      <button type="button" id="langEn">🇬🇧 English</button>
+    </div>
+
     <a class="btn" href="#join" data-i18n="navJoinButton">Join FUTURE</a>
+
   </div>
 </header>
 
 <main>
+
+  <!-- Hero Section -->
+
   <div class="container hero" id="home">
+
     <div>
       <div class="eyebrow">LEARN • CONNECT • CREATE</div>
-      <h1 data-i18n="heroTitle">نصنع فرصًا<br>مع <span>FUTURE</span></h1>
-      <p data-i18n="heroText">تيم طلابي في Delta University بيجمع بين الأفكار، التعاون، وتنظيم الفعاليات لبناء تجربة جامعية أقوى وفتح فرص جديدة للطلاب.</p>
+
+      <h1 data-i18n="heroTitle">
+        نصنع فرصًا<br>مع <span>FUTURE</span>
+      </h1>
+
+      <p data-i18n="heroText">
+        تيم طلابي في Delta University بيجمع بين الأفكار، التعاون، وتنظيم الفعاليات لبناء تجربة جامعية أقوى وفتح فرص جديدة للطلاب.
+      </p>
+
       <div class="actions">
         <a class="btn" href="#join" data-i18n="heroApply">قدّم للانضمام ↙</a>
         <a class="btn secondary" href="#departments" data-i18n="heroExplore">اكتشف الأقسام</a>
       </div>
     </div>
+
     <div class="hero-art" aria-label="FUTURE team visual">
       <span class="floating f1">Teamwork 🤝</span>
       <span class="floating f2">New Ideas ✦</span>
       <span class="floating f3">Real Opportunities</span>
       <img src="future-logo.jpg" alt="FUTURE — Delta University">
     </div>
+
   </div>
+
+  <!-- About Section -->
 
   <section id="about">
     <div class="container about-box">
+
       <div>
         <div class="eyebrow">WHO WE ARE</div>
+
         <h2 data-i18n="aboutTitle">عن FUTURE</h2>
-        <p data-i18n="aboutText1">مساحة للطلاب عشان يطوروا مهاراتهم، يشتغلوا في فريق، ويشاركوا في أنشطة وفعاليات تجمع بين التنظيم، المعرفة، والإبداع.</p>
-        <p data-i18n="aboutText2">هدفنا إن كل عضو يقدر يساهم بفكرته ومهاراته، ويتعلم من التجربة العملية.</p>
+
+        <p data-i18n="aboutText1">
+          مساحة للطلاب عشان يطوروا مهاراتهم، يشتغلوا في فريق، ويشاركوا في أنشطة وفعاليات تجمع بين التنظيم، المعرفة، والإبداع.
+        </p>
+
+        <p data-i18n="aboutText2">
+          هدفنا إن كل عضو يقدر يساهم بفكرته ومهاراته، ويتعلم من التجربة العملية.
+        </p>
       </div>
+
       <div class="pill-list">
         <span class="pill">Teamwork — العمل الجماعي</span>
         <span class="pill">Creativity — الإبداع</span>
@@ -121,117 +553,464 @@
         <span class="pill">Events — الفعاليات</span>
         <span class="pill">Development — التطوير</span>
       </div>
+
     </div>
   </section>
+
+  <!-- Leadership Section -->
+
+  <section id="leadership">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">CORE LEADERSHIP</div>
+
+        <h2 data-i18n="leadershipTitle">القيادات الأساسية</h2>
+
+        <p data-i18n="leadershipText">
+          القيادات المسؤولة عن توجيه التيم وتنظيم أعضائه وتحقيق أهدافه.
+        </p>
+      </div>
+
+      <div class="leadership-grid">
+
+        <!-- Leader Card -->
+
+        <article class="leader-card">
+
+          <div class="leader-icon">👑</div>
+
+          <h3 data-i18n="leaderTitle">الليدر</h3>
+
+          <span class="role-en">TEAM LEADER</span>
+
+          <p data-i18n="leaderDescription">
+            المسؤول الأول عن قيادة التيم بالكامل، وتوجيه الأقسام ومتابعة تنفيذ الخطة العامة.
+          </p>
+
+          <ul>
+            <li data-i18n="leaderPoint1">تحديد أهداف التيم ووضع الخطة العامة.</li>
+            <li data-i18n="leaderPoint2">متابعة الـ Heads والتأكد من أداء كل قسم لدوره.</li>
+            <li data-i18n="leaderPoint3">اتخاذ القرارات المهمة وحل المشكلات بين الأقسام.</li>
+            <li data-i18n="leaderPoint4">تمثيل التيم أمام الدكاترة وإدارة الكلية.</li>
+          </ul>
+
+        </article>
+
+        <!-- HR Card -->
+
+        <article class="leader-card">
+
+          <div class="leader-icon">👥</div>
+
+          <h3 data-i18n="hrTitle">الموارد البشرية</h3>
+
+          <span class="role-en">HR — HUMAN RESOURCES</span>
+
+          <p data-i18n="hrDescription">
+            المسؤول عن إدارة أعضاء التيم ومتابعة شؤونهم وتنظيم مشاركتهم داخل الفريق.
+          </p>
+
+          <ul>
+            <li data-i18n="hrPoint1">استقبال الأعضاء الجدد والتعرف على مهاراتهم.</li>
+            <li data-i18n="hrPoint2">توزيع الأعضاء على الأقسام المناسبة.</li>
+            <li data-i18n="hrPoint3">متابعة الالتزام والحضور والتفاعل.</li>
+            <li data-i18n="hrPoint4">تقييم الأداء ومتابعة تطور الأعضاء.</li>
+            <li data-i18n="hrPoint5">حل المشكلات والخلافات بين الأعضاء.</li>
+          </ul>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Team Structure Section -->
 
   <section id="team-structure">
-  <div class="container join">
-    <div class="eyebrow">TEAM STRUCTURE</div>
-    <h2>Team Structure & Responsibilities</h2>
-    <p>Discover our team leaders, departments, and responsibilities.</p>
-    <a class="btn" href="future-team-structure.png" target="_blank" rel="noopener">
-      View Team Structure ↗
-    </a>
-  </div>
-</section>
+
+    <div class="container join">
+
+      <div class="eyebrow">TEAM STRUCTURE</div>
+
+      <h2>Team Structure & Responsibilities</h2>
+
+      <p>
+        Discover our team leaders, departments, and responsibilities.
+      </p>
+
+      <a class="btn" href="future-team-structure.png" target="_blank" rel="noopener">
+        View Team Structure ↗
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Departments Section -->
 
   <section id="departments">
+
     <div class="container">
+
       <div class="section-head">
+
         <div class="eyebrow">OUR DEPARTMENTS</div>
+
         <h2 data-i18n="departmentsTitle">أقسام التيم</h2>
-        <p data-i18n="departmentsText">كل قسم له دور مختلف، وكل الأدوار بتتكامل عشان نحقق هدف واحد.</p>
+
+        <p data-i18n="departmentsText">
+          كل قسم له دور مختلف، وكل الأدوار بتتكامل عشان نحقق هدف واحد.
+        </p>
+
       </div>
+
       <div class="grid">
-        <article class="card"><div class="icon">📋</div><h3><span data-i18n="deptOrg">التنظيم</span> <span class="en">ORGANIZATION</span></h3><p data-i18n="deptOrgText">تجهيز المكان، تنظيم الحضور، توزيع المهام، ومتابعة تنفيذ الفعاليات على أرض الواقع.</p></article>
-        <article class="card"><div class="icon">🧭</div><h3><span data-i18n="deptPlanning">التخطيط</span> <span class="en">PLANNING</span></h3><p data-i18n="deptPlanningText">تحديد الأهداف، إعداد الجداول، تقسيم المشروعات لمهام، والاستعداد للتحديات.</p></article>
-        <article class="card"><div class="icon">🔬</div><h3><span data-i18n="deptResearch">البحث العلمي</span> <span class="en">SCIENTIFIC RESEARCH</span></h3><p data-i18n="deptResearchText">البحث عن مصادر موثوقة، نشر أساسيات البحث العلمي، ودعم المبادرات والأنشطة العلمية.</p></article>
-        <article class="card"><div class="icon">🤖</div><h3><span data-i18n="deptAI">الذكاء الاصطناعي</span> <span class="en">ARTIFICIAL INTELLIGENCE</span></h3><p data-i18n="deptAIText">استكشاف أدوات AI، تنظيم ورش مفيدة، والمساعدة في تحليل البيانات وتطوير الأفكار.</p></article>
-        <article class="card"><div class="icon">🤝</div><h3><span data-i18n="deptPR">العلاقات العامة</span> <span class="en">PUBLIC RELATIONS — PR</span></h3><p data-i18n="deptPRText">التواصل مع الشركات والرعاة والجهات الخارجية، وبناء علاقات تفتح فرصًا للتعاون والفعاليات.</p></article>
-        <article class="card"><div class="icon">🎬</div><h3><span data-i18n="deptMedia">الميديا</span> <span class="en">MEDIA</span></h3><p data-i18n="deptMediaText">تصميم المحتوى، تصوير الفعاليات، المونتاج، وإدارة صفحات التيم وتوثيق إنجازاته.</p></article>
+
+        <article class="card">
+          <div class="icon">📋</div>
+          <h3><span data-i18n="deptOrg">التنظيم</span> <span class="en">ORGANIZATION</span></h3>
+          <p data-i18n="deptOrgText">تجهيز المكان، تنظيم الحضور، توزيع المهام، ومتابعة تنفيذ الفعاليات على أرض الواقع.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧭</div>
+          <h3><span data-i18n="deptPlanning">التخطيط</span> <span class="en">PLANNING</span></h3>
+          <p data-i18n="deptPlanningText">تحديد الأهداف، إعداد الجداول، تقسيم المشروعات لمهام، والاستعداد للتحديات.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔬</div>
+          <h3><span data-i18n="deptResearch">البحث العلمي</span> <span class="en">SCIENTIFIC RESEARCH</span></h3>
+          <p data-i18n="deptResearchText">البحث عن مصادر موثوقة، نشر أساسيات البحث العلمي، ودعم المبادرات والأنشطة العلمية.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🤖</div>
+          <h3><span data-i18n="deptAI">الذكاء الاصطناعي</span> <span class="en">ARTIFICIAL INTELLIGENCE</span></h3>
+          <p data-i18n="deptAIText">استكشاف أدوات AI، تنظيم ورش مفيدة، والمساعدة في تحليل البيانات وتطوير الأفكار.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🤝</div>
+          <h3><span data-i18n="deptPR">العلاقات العامة</span> <span class="en">PUBLIC RELATIONS — PR</span></h3>
+          <p data-i18n="deptPRText">التواصل مع الشركات والرعاة والجهات الخارجية، وبناء علاقات تفتح فرصًا للتعاون والفعاليات.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎬</div>
+          <h3><span data-i18n="deptMedia">الميديا</span> <span class="en">MEDIA</span></h3>
+          <p data-i18n="deptMediaText">تصميم المحتوى، تصوير الفعاليات، المونتاج، وإدارة صفحات التيم وتوثيق إنجازاته.</p>
+        </article>
+
       </div>
+
     </div>
+
   </section>
+
+  <!-- Events Section -->
 
   <section id="events">
+
     <div class="container">
+
       <div class="section-head">
+
         <div class="eyebrow">HOW WE WORK</div>
+
         <h2 data-i18n="eventsTitle">من الفكرة للتنفيذ</h2>
-        <p data-i18n="eventsText">الأقسام بتتعاون مع بعض عشان كل فعالية تطلع بأفضل شكل.</p>
+
+        <p data-i18n="eventsText">
+          الأقسام بتتعاون مع بعض عشان كل فعالية تطلع بأفضل شكل.
+        </p>
+
       </div>
+
       <div class="steps">
-        <div class="step"><b data-i18n="step1Title">01 — نخطط</b><p data-i18n="step1Text">نحدد الهدف، الجمهور، الموارد، والجدول الزمني.</p></div>
-        <div class="step"><b data-i18n="step2Title">02 — نتعاون</b><p data-i18n="step2Text">نجهز المحتوى، نتواصل مع الشركاء، وننسق بين الأقسام.</p></div>
-        <div class="step"><b data-i18n="step3Title">03 — ننفذ ونوثّق</b><p data-i18n="step3Text">ننظم الفعالية، نتابع التفاصيل، ونشارك أبرز اللحظات والنتائج.</p></div>
+
+        <div class="step">
+          <b data-i18n="step1Title">01 — نخطط</b>
+          <p data-i18n="step1Text">نحدد الهدف، الجمهور، الموارد، والجدول الزمني.</p>
+        </div>
+
+        <div class="step">
+          <b data-i18n="step2Title">02 — نتعاون</b>
+          <p data-i18n="step2Text">نجهز المحتوى، نتواصل مع الشركاء، وننسق بين الأقسام.</p>
+        </div>
+
+        <div class="step">
+          <b data-i18n="step3Title">03 — ننفذ ونوثّق</b>
+          <p data-i18n="step3Text">ننظم الفعالية، نتابع التفاصيل، ونشارك أبرز اللحظات والنتائج.</p>
+        </div>
+
       </div>
+
     </div>
+
   </section>
+
+  <!-- Join Section -->
 
   <section id="join">
+
     <div class="container join">
+
       <div class="eyebrow">YOUR NEXT STEP STARTS HERE</div>
+
       <h2 data-i18n="joinTitle">جاهز تكون جزء من FUTURE؟</h2>
-      <p data-i18n="joinText">اختار القسم اللي يناسب اهتماماتك، وعرّفنا بنفسك وبالمهارات اللي حابب تطورها معانا.</p>
-      <a class="btn" id="joinButton" href="https://docs.google.com/forms/d/e/1FAIpQLSeJm1M8hXwha2lXVMzbPKSTCvVCoC8rcPU8iRLdqxv5V5JMTQ/viewform?usp=publish-editor" target="_blank" rel="noopener" data-i18n="joinButton">افتح فورم التقديم ↗</a>
+
+      <p data-i18n="joinText">
+        اختار القسم اللي يناسب اهتماماتك، وعرّفنا بنفسك وبالمهارات اللي حابب تطورها معانا.
+      </p>
+
+      <a
+        class="btn"
+        id="joinButton"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeJm1M8hXwha2lXVMzbPKSTCvVCoC8rcPU8iRLdqxv5V5JMTQ/viewform?usp=publish-editor"
+        target="_blank"
+        rel="noopener"
+        data-i18n="joinButton">
+        افتح فورم التقديم ↗
+      </a>
+
     </div>
+
   </section>
+
 </main>
 
+<!-- Footer -->
+
 <footer>
+
   <div class="container foot">
+
     <div><strong>FUTURE</strong> · Delta University</div>
+
     <div class="socials">
-    <a href="https://whatsapp.com/channel/0029Vb8wZ4T4NViotw2f5G2g" aria-label="Whatsapp">Whatsapp</a>
-    <a href="https://www.instagram.com/future.team333?obrf=MXFyMDlka21xNnh3dw==" aria-label="Instagram">Instagram</a>
-    <a href="#" aria-label="Facebook">Facebook</a>
-    <a href="https://www.tiktok.com/@future.team333?_r=1&_t=ZS-9AxzpDcNsCC" aria-label="TikTok">TikTok</a>
-    <a href="mailto:futureteam333@gmail.com">Email</a>
-</div>
 
-    <div>© <span id="year"></span> <span data-i18n="copyright">FUTURE Team. All rights reserved.</span></div>
+      <a href="https://whatsapp.com/channel/0029Vb8wZ4T4NViotw2f5G2g" aria-label="Whatsapp">Whatsapp</a>
+
+      <a href="https://www.instagram.com/future.team333?obrf=MXFyMDlka21xNnh3dw==" aria-label="Instagram">Instagram</a>
+
+      <a href="#" aria-label="Facebook">Facebook</a>
+
+      <a href="https://www.tiktok.com/@future.team333?_r=1&_t=ZS-9AxzpDcNsCC" aria-label="TikTok">TikTok</a>
+
+      <a href="mailto:futureteam333@gmail.com">Email</a>
+
+    </div>
+
+    <div>
+      © <span id="year"></span>
+      <span data-i18n="copyright">FUTURE Team. All rights reserved.</span>
+    </div>
+
   </div>
+
 </footer>
+
 <script>
+
 const translations = {
-ar: {
-navAbout:"عن التيم",navDepartments:"الأقسام",navEvents:"الفعاليات",navJoin:"انضم لينا",navJoinButton:"Join FUTURE",
-heroTitle:'نصنع فرصًا<br>مع <span>FUTURE</span>',heroText:"تيم طلابي في Delta University بيجمع بين الأفكار، التعاون، وتنظيم الفعاليات لبناء تجربة جامعية أقوى وفتح فرص جديدة للطلاب.",heroApply:"قدّم للانضمام ↙",heroExplore:"اكتشف الأقسام",
-aboutTitle:"عن FUTURE",aboutText1:"مساحة للطلاب عشان يطوروا مهاراتهم، يشتغلوا في فريق، ويشاركوا في أنشطة وفعاليات تجمع بين التنظيم، المعرفة، والإبداع.",aboutText2:"هدفنا إن كل عضو يقدر يساهم بفكرته ومهاراته، ويتعلم من التجربة العملية.",
-departmentsTitle:"أقسام التيم",departmentsText:"كل قسم له دور مختلف، وكل الأدوار بتتكامل عشان نحقق هدف واحد.",
-deptOrg:"التنظيم",deptOrgText:"تجهيز المكان، تنظيم الحضور، توزيع المهام، ومتابعة تنفيذ الفعاليات على أرض الواقع.",deptPlanning:"التخطيط",deptPlanningText:"تحديد الأهداف، إعداد الجداول، تقسيم المشروعات لمهام، والاستعداد للتحديات.",deptResearch:"البحث العلمي",deptResearchText:"البحث عن مصادر موثوقة، نشر أساسيات البحث العلمي، ودعم المبادرات والأنشطة العلمية.",deptAI:"الذكاء الاصطناعي",deptAIText:"استكشاف أدوات AI، تنظيم ورش مفيدة، والمساعدة في تحليل البيانات وتطوير الأفكار.",deptPR:"العلاقات العامة",deptPRText:"التواصل مع الشركات والرعاة والجهات الخارجية، وبناء علاقات تفتح فرصًا للتعاون والفعاليات.",deptMedia:"الميديا",deptMediaText:"تصميم المحتوى، تصوير الفعاليات، المونتاج، وإدارة صفحات التيم وتوثيق إنجازاته.",
-eventsTitle:"من الفكرة للتنفيذ",eventsText:"الأقسام بتتعاون مع بعض عشان كل فعالية تطلع بأفضل شكل.",step1Title:"01 — نخطط",step1Text:"نحدد الهدف، الجمهور، الموارد، والجدول الزمني.",step2Title:"02 — نتعاون",step2Text:"نجهز المحتوى، نتواصل مع الشركاء، وننسق بين الأقسام.",step3Title:"03 — ننفذ ونوثّق",step3Text:"ننظم الفعالية، نتابع التفاصيل، ونشارك أبرز اللحظات والنتائج.",
-joinTitle:"جاهز تكون جزء من FUTURE؟",joinText:"اختار القسم اللي يناسب اهتماماتك، وعرّفنا بنفسك وبالمهارات اللي حابب تطورها معانا.",joinButton:"افتح فورم التقديم ↗",copyright:"FUTURE Team. All rights reserved."
-},
-en: {
-navAbout:"About Us",navDepartments:"Departments",navEvents:"Events",navJoin:"Join Us",navJoinButton:"Join FUTURE",
-heroTitle:'Creating Opportunities<br>with <span>FUTURE</span>',heroText:"A student team at Delta University bringing together ideas, collaboration, and event planning to create a stronger university experience and open new opportunities for students.",heroApply:"Apply to Join ↙",heroExplore:"Explore Departments",
-aboutTitle:"About FUTURE",aboutText1:"A space for students to develop their skills, work as a team, and take part in activities and events that bring together organization, knowledge, and creativity.",aboutText2:"Our goal is for every member to contribute ideas and skills while learning through practical experience.",
-departmentsTitle:"Our Departments",departmentsText:"Each department has a different role, and all roles work together toward one shared goal.",
-deptOrg:"Organization",deptOrgText:"Preparing venues, organizing attendance, distributing tasks, and supporting event execution.",deptPlanning:"Planning",deptPlanningText:"Setting goals, preparing schedules, breaking projects into tasks, and preparing for challenges.",deptResearch:"Scientific Research",deptResearchText:"Finding reliable sources, sharing research basics, and supporting scientific initiatives and activities.",deptAI:"Artificial Intelligence",deptAIText:"Exploring AI tools, organizing useful workshops, and helping with data analysis and idea development.",deptPR:"Public Relations",deptPRText:"Communicating with companies, sponsors, and external partners to build collaboration opportunities.",deptMedia:"Media",deptMediaText:"Creating content, photographing events, editing videos, managing team pages, and documenting achievements.",
-eventsTitle:"From Idea to Execution",eventsText:"Our departments work together to make every event the best it can be.",step1Title:"01 — Plan",step1Text:"We define the goal, audience, resources, and timeline.",step2Title:"02 — Collaborate",step2Text:"We prepare content, contact partners, and coordinate across departments.",step3Title:"03 — Execute & Document",step3Text:"We run the event, follow the details, and share key moments and results.",
-joinTitle:"Ready to Be Part of FUTURE?",joinText:"Choose the department that matches your interests and tell us about yourself and the skills you want to develop.",joinButton:"Open Application Form ↗",copyright:"FUTURE Team. All rights reserved."
-}
+
+  ar: {
+
+    navAbout:"عن التيم",
+    navLeadership:"القيادات",
+    navDepartments:"الأقسام",
+    navEvents:"الفعاليات",
+    navJoin:"انضم لينا",
+    navJoinButton:"Join FUTURE",
+
+    heroTitle:'نصنع فرصًا<br>مع <span>FUTURE</span>',
+    heroText:"تيم طلابي في Delta University بيجمع بين الأفكار، التعاون، وتنظيم الفعاليات لبناء تجربة جامعية أقوى وفتح فرص جديدة للطلاب.",
+    heroApply:"قدّم للانضمام ↙",
+    heroExplore:"اكتشف الأقسام",
+
+    aboutTitle:"عن FUTURE",
+    aboutText1:"مساحة للطلاب عشان يطوروا مهاراتهم، يشتغلوا في فريق، ويشاركوا في أنشطة وفعاليات تجمع بين التنظيم، المعرفة، والإبداع.",
+    aboutText2:"هدفنا إن كل عضو يقدر يساهم بفكرته ومهاراته، ويتعلم من التجربة العملية.",
+
+    leadershipTitle:"القيادات الأساسية",
+    leadershipText:"القيادات المسؤولة عن توجيه التيم وتنظيم أعضائه وتحقيق أهدافه.",
+
+    leaderTitle:"الليدر",
+    leaderDescription:"المسؤول الأول عن قيادة التيم بالكامل، وتوجيه الأقسام ومتابعة تنفيذ الخطة العامة.",
+    leaderPoint1:"تحديد أهداف التيم ووضع الخطة العامة.",
+    leaderPoint2:"متابعة الـ Heads والتأكد من أداء كل قسم لدوره.",
+    leaderPoint3:"اتخاذ القرارات المهمة وحل المشكلات بين الأقسام.",
+    leaderPoint4:"تمثيل التيم أمام الدكاترة وإدارة الكلية.",
+
+    hrTitle:"الموارد البشرية",
+    hrDescription:"المسؤول عن إدارة أعضاء التيم ومتابعة شؤونهم وتنظيم مشاركتهم داخل الفريق.",
+    hrPoint1:"استقبال الأعضاء الجدد والتعرف على مهاراتهم.",
+    hrPoint2:"توزيع الأعضاء على الأقسام المناسبة.",
+    hrPoint3:"متابعة الالتزام والحضور والتفاعل.",
+    hrPoint4:"تقييم الأداء ومتابعة تطور الأعضاء.",
+    hrPoint5:"حل المشكلات والخلافات بين الأعضاء.",
+
+    departmentsTitle:"أقسام التيم",
+    departmentsText:"كل قسم له دور مختلف، وكل الأدوار بتتكامل عشان نحقق هدف واحد.",
+
+    deptOrg:"التنظيم",
+    deptOrgText:"تجهيز المكان، تنظيم الحضور، توزيع المهام، ومتابعة تنفيذ الفعاليات على أرض الواقع.",
+
+    deptPlanning:"التخطيط",
+    deptPlanningText:"تحديد الأهداف، إعداد الجداول، تقسيم المشروعات لمهام، والاستعداد للتحديات.",
+
+    deptResearch:"البحث العلمي",
+    deptResearchText:"البحث عن مصادر موثوقة، نشر أساسيات البحث العلمي، ودعم المبادرات والأنشطة العلمية.",
+
+    deptAI:"الذكاء الاصطناعي",
+    deptAIText:"استكشاف أدوات AI، تنظيم ورش مفيدة، والمساعدة في تحليل البيانات وتطوير الأفكار.",
+
+    deptPR:"العلاقات العامة",
+    deptPRText:"التواصل مع الشركات والرعاة والجهات الخارجية، وبناء علاقات تفتح فرصًا للتعاون والفعاليات.",
+
+    deptMedia:"الميديا",
+    deptMediaText:"تصميم المحتوى، تصوير الفعاليات، المونتاج، وإدارة صفحات التيم وتوثيق إنجازاته.",
+
+    eventsTitle:"من الفكرة للتنفيذ",
+    eventsText:"الأقسام بتتعاون مع بعض عشان كل فعالية تطلع بأفضل شكل.",
+
+    step1Title:"01 — نخطط",
+    step1Text:"نحدد الهدف، الجمهور، الموارد، والجدول الزمني.",
+
+    step2Title:"02 — نتعاون",
+    step2Text:"نجهز المحتوى، نتواصل مع الشركاء، وننسق بين الأقسام.",
+
+    step3Title:"03 — ننفذ ونوثّق",
+    step3Text:"ننظم الفعالية، نتابع التفاصيل، ونشارك أبرز اللحظات والنتائج.",
+
+    joinTitle:"جاهز تكون جزء من FUTURE؟",
+    joinText:"اختار القسم اللي يناسب اهتماماتك، وعرّفنا بنفسك وبالمهارات اللي حابب تطورها معانا.",
+    joinButton:"افتح فورم التقديم ↗",
+
+    copyright:"FUTURE Team. All rights reserved."
+
+  },
+
+  en: {
+
+    navAbout:"About Us",
+    navLeadership:"Leadership",
+    navDepartments:"Departments",
+    navEvents:"Events",
+    navJoin:"Join Us",
+    navJoinButton:"Join FUTURE",
+
+    heroTitle:'Creating Opportunities<br>with <span>FUTURE</span>',
+    heroText:"A student team at Delta University bringing together ideas, collaboration, and event planning to create a stronger university experience and open new opportunities for students.",
+    heroApply:"Apply to Join ↙",
+    heroExplore:"Explore Departments",
+
+    aboutTitle:"About FUTURE",
+    aboutText1:"A space for students to develop their skills, work as a team, and take part in activities and events that bring together organization, knowledge, and creativity.",
+    aboutText2:"Our goal is for every member to contribute ideas and skills while learning through practical experience.",
+
+    leadershipTitle:"Core Leadership",
+    leadershipText:"The leaders responsible for guiding the team, managing its members, and achieving its goals.",
+
+    leaderTitle:"Team Leader",
+    leaderDescription:"The main person responsible for leading the entire team, guiding departments, and following up on the overall plan.",
+    leaderPoint1:"Setting team goals and defining the general plan.",
+    leaderPoint2:"Following up with department Heads and ensuring each department performs its role.",
+    leaderPoint3:"Making important decisions and solving problems between departments.",
+    leaderPoint4:"Representing the team before faculty members and university administration.",
+
+    hrTitle:"Human Resources",
+    hrDescription:"Responsible for managing team members, supporting them, and organizing their participation within the team.",
+    hrPoint1:"Welcoming new members and identifying their skills.",
+    hrPoint2:"Assigning members to suitable departments.",
+    hrPoint3:"Following up on commitment, attendance, and engagement.",
+    hrPoint4:"Evaluating performance and monitoring member development.",
+    hrPoint5:"Solving problems and conflicts between members.",
+
+    departmentsTitle:"Our Departments",
+    departmentsText:"Each department has a different role, and all roles work together toward one shared goal.",
+
+    deptOrg:"Organization",
+    deptOrgText:"Preparing venues, organizing attendance, distributing tasks, and supporting event execution.",
+
+    deptPlanning:"Planning",
+    deptPlanningText:"Setting goals, preparing schedules, breaking projects into tasks, and preparing for challenges.",
+
+    deptResearch:"Scientific Research",
+    deptResearchText:"Finding reliable sources, sharing research basics, and supporting scientific initiatives and activities.",
+
+    deptAI:"Artificial Intelligence",
+    deptAIText:"Exploring AI tools, organizing useful workshops, and helping with data analysis and idea development.",
+
+    deptPR:"Public Relations",
+    deptPRText:"Communicating with companies, sponsors, and external partners to build collaboration opportunities.",
+
+    deptMedia:"Media",
+    deptMediaText:"Creating content, photographing events, editing videos, managing team pages, and documenting achievements.",
+
+    eventsTitle:"From Idea to Execution",
+    eventsText:"Our departments work together to make every event the best it can be.",
+
+    step1Title:"01 — Plan",
+    step1Text:"We define the goal, audience, resources, and timeline.",
+
+    step2Title:"02 — Collaborate",
+    step2Text:"We prepare content, contact partners, and coordinate across departments.",
+
+    step3Title:"03 — Execute & Document",
+    step3Text:"We run the event, follow the details, and share key moments and results.",
+
+    joinTitle:"Ready to Be Part of FUTURE?",
+    joinText:"Choose the department that matches your interests and tell us about yourself and the skills you want to develop.",
+    joinButton:"Open Application Form ↗",
+
+    copyright:"FUTURE Team. All rights reserved."
+
+  }
+
 };
+
 function setLanguage(lang){
-document.documentElement.lang=lang;
-document.documentElement.dir=lang==="ar"?"rtl":"ltr";
-document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;if(translations[lang][key]!==undefined)el.innerHTML=translations[lang][key];});
-document.getElementById("langAr").classList.toggle("active",lang==="ar");
-document.getElementById("langEn").classList.toggle("active",lang==="en");
-localStorage.setItem("futureSiteLanguage",lang);
+
+  document.documentElement.lang=lang;
+
+  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+
+    const key=el.dataset.i18n;
+
+    if(translations[lang][key]!==undefined){
+      el.innerHTML=translations[lang][key];
+    }
+
+  });
+
+  document.getElementById("langAr").classList.toggle("active",lang==="ar");
+
+  document.getElementById("langEn").classList.toggle("active",lang==="en");
+
+  localStorage.setItem("futureSiteLanguage",lang);
+
 }
+
 document.getElementById("langAr").addEventListener("click",()=>setLanguage("ar"));
+
 document.getElementById("langEn").addEventListener("click",()=>setLanguage("en"));
+
 setLanguage(localStorage.getItem("futureSiteLanguage")||"ar");
-document.getElementById("joinButton").href="https://docs.google.com/forms/d/e/1FAIpQLSf4U0GjOjChmrhBIaglOV8OV4cK48fGgODpT410kESZLqyrhQ/viewform";
+
 document.getElementById("year").textContent=new Date().getFullYear();
+
 </script>
-<div style="text-align: center; padding: 10px; color: #8fa7bd; font-size: 12px; opacity: 0.8;">
-    by.Gaber_Alseaidy
+
+<div style="text-align:center;padding:10px;color:#8fa7bd;font-size:12px;opacity:.8;">
+  by.Gaber_Alseaidy
 </div>
-
-
 
 </body>
 </html>
