@@ -819,13 +819,15 @@
       font-size: 16px;
     }
 
-    /* Footer */
+    /* Footer - Fixed LTR Orientation */
     footer {
       border-top: 1px solid var(--line);
       padding: 36px 0;
       color: var(--muted);
       font-size: 14px;
       background: rgba(3, 7, 18, 0.95);
+      direction: ltr !important;
+      text-align: left !important;
     }
 
     .foot {
@@ -834,6 +836,7 @@
       align-items: center;
       gap: 20px;
       flex-wrap: wrap;
+      direction: ltr !important;
     }
 
     .socials {
@@ -863,6 +866,7 @@
       box-shadow: 0 0 20px var(--primary-glow);
     }
 
+    /* Signature - Fixed LTR Orientation */
     .signature {
       text-align: center;
       padding: 16px 0;
@@ -873,6 +877,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+      direction: ltr !important;
     }
 
     .signature a {
@@ -1179,7 +1184,7 @@
       </div>
     </section>
 
-    <!-- Interactive Department Quiz Section (All 6 Departments Covered) -->
+    <!-- Interactive Department Quiz Section -->
     <section id="quiz">
       <div class="container">
         <div class="quiz-card cyber-border">
@@ -1262,27 +1267,26 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Footer (Fixed Direction LTR) -->
+  <footer dir="ltr">
     <div class="container foot">
       <div>
         <strong>FUTURE</strong> · Delta University
       </div>
-
       <div class="socials">
         <a href="https://whatsapp.com/channel/0029Vb8wZ4T4NViotw2f5G2g" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/future.team333?obrf=MXFyMDlka21xNnh3dw==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@future.team333?_r=1&_t=ZS-9AxzpDcNsCC" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         <a href="mailto:futureteam333@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
-
       <div>
-        © <span id="year"></span> <span data-i18n="copyright">FUTURE Team. All rights reserved.</span>
+        © <span id="year"></span> <span>FUTURE Team. All rights reserved.</span>
       </div>
     </div>
   </footer>
 
-  <div class="signature">
+  <!-- Signature (Fixed Direction LTR) -->
+  <div class="signature" dir="ltr">
     <span>Developed by</span>
     <a href="https://github.com/Gaber-Alseaidy" target="_blank" rel="noopener">Gaber Alseaidy</a>
   </div>
@@ -1569,9 +1573,7 @@
 
         joinTitle: "جاهز تكون جزء من FUTURE؟",
         joinText: "اختار القسم اللي يناسب اهتماماتك، وعرّفنا بنفسك وبالمهارات اللي حابب تطورها معانا.",
-        joinButton: "افتح فورم التقديم ↗",
-
-        copyright: "FUTURE Team. All rights reserved."
+        joinButton: "افتح فورم التقديم ↗"
       },
 
       en: {
@@ -1649,9 +1651,7 @@
 
         joinTitle: "Ready to Be Part of FUTURE?",
         joinText: "Choose the department that matches your interests and tell us about yourself.",
-        joinButton: "Open Application Form ↗",
-
-        copyright: "FUTURE Team. All rights reserved."
+        joinButton: "Open Application Form ↗"
       }
     };
 
